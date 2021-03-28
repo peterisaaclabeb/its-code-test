@@ -1,0 +1,88 @@
+$blue : #2611e7;
+$blue-gray-darken: #2c3e50;
+$blue : #3498db;
+$blue-darken : #2980b9;
+$green : #1abc9c;
+$green-darken : #16a085;
+
+
+.step-list {
+    list-style: none;
+    display: inline-block;
+    margin: auto;
+
+    .icon {
+        font-size: 14px;
+    }
+
+    li {
+        float: left;
+        margin-bottom: 5px;
+        cursor: pointer;
+
+        div {
+            color: #FFF;
+            display: block;
+            background: $blue;
+            text-decoration: none;
+            position: relative;
+            height: 40px;
+            line-height: 40px;
+            padding: 0 10px 0 5px;
+            text-align: center;
+            margin-right: 23px;
+
+            span {
+                margin-right: 10px;
+            }
+
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                border: 0 solid $blue;
+                border-width: 20px 10px;
+                width: 0;
+                height: 0;
+            }
+
+            &:before {
+                left: -20px;
+                border-left-color: transparent;
+            }
+
+            &:after {
+                left: 100%;
+                border-color: transparent;
+                border-left-color: $blue;
+            }
+
+            &:hover {
+                background-color: $green;
+
+                &:before {
+                    border-color: $green;
+                    border-left-color: transparent;
+                }
+
+                &:after {
+                    border-left-color: $green;
+                }
+            }
+
+            &:active {
+                background-color: $green-darken;
+
+                &:before {
+                    border-color: $green-darken;
+                    border-left-color: transparent;
+                }
+
+                &:after {
+                    border-left-color: $green-darken;
+                }
+            }
+        }
+    }
+}
