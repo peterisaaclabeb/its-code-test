@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router';
 import { Layout } from './components/Layout';
+import { Main } from './components/Main';
 import { Step } from './components/Step';
 
 import './custom.css'
@@ -11,7 +12,7 @@ export default class App extends Component {
   render() {
     return (
       <Layout>
-        <Route path='/' component={Step} />
+        <Route path='/' component={Main} />
       </Layout>
     );
   }

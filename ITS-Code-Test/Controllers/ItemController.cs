@@ -55,6 +55,20 @@ namespace ITS_Code_Test.Controllers
 			return Ok(item);
 		}
 
+		[HttpPut]
+		public ActionResult<Item> Put(Item item)
+		{
+			if (!ModelState.IsValid)
+			{
+				return BadRequest();
+			}
+
+			_codeTestContext.Items.Update(item);
+			_codeTestContext.SaveChanges();
+
+			return Ok(item);
+		}
+
 
 		[HttpDelete("{id}")]
 		public ActionResult Delete(int id)

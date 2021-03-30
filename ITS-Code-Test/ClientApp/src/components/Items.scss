@@ -1,0 +1,68 @@
+@import './colors';
+
+.items-container {
+    margin: auto;
+    width: 100%;
+
+    ul {
+        list-style: none;
+        margin: 55px auto;
+
+        .item-content {
+            margin-bottom: 20px;
+
+            div {
+                display: inline-block;
+                display: list-item;
+                list-style-type: disc;
+                list-style-position: inside;
+            }
+        }
+    }
+
+    .item-header {
+        border-bottom: 2px $blue solid;
+
+        div {
+            color: white;
+            background-color: $blue;
+            display: inline-block;
+            padding: 10px 35px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            cursor: pointer;
+
+            span {
+                margin-right: 10px;
+            }
+        }
+    }
+
+
+
+    form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 150px;
+
+        .form-col {
+            flex: 1 1 100%;
+        }
+
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+
+            input {
+                width: 280px;
+                background-color: $gray;
+                border: none;
+                outline: none;
+                padding-left: 5px;
+            }
+        }
+
+
+    }
+}
